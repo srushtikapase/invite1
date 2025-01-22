@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haldi Kunku Festival - Makar Sankranti</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ffe8cc, #fff4e6);
+            text-align: center;
+            color: #5a4638;
+            background-size: cover;
+            height: 100%;
+            overflow-y: auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding-top: 50px;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+            padding: 0 20px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 20px 0;
+            color: #d17c3a;
+            text-shadow: 0 3px 15px rgba(181, 114, 69, 0.8);
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 3px 10px rgba(181, 114, 69, 0.6);
+            }
+            100% {
+                text-shadow: 0 3px 25px rgba(181, 114, 69, 1);
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #945d36;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(148, 93, 54, 0.6);
+            font-weight: 500;
+        }
+
+        .invitation {
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: #fffaf2;
+            color: #5a4638;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .invitation::before, .invitation::after {
+            content: '';
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            background: rgba(255, 224, 178, 0.6);
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0px 10px 30px rgba(255, 224, 178, 0.4);
+        }
+
+        .invitation::before {
+            top: -60px;
+            left: -60px;
+        }
+
+        .invitation::after {
+            bottom: -60px;
+            right: -60px;
+            background: rgba(255, 204, 128, 0.6);
+        }
+
+        .highlight-text {
+            color: #d17c3a;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #945d36;
+            background-color: #fff4e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #945d36;
+            font-weight: 600;
+            margin-top: 40px;
+        }
+
+        .kite-section {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .kite {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: rotate(45deg);
+    background: linear-gradient(45deg, #f44336, #ffeb3b, #2196f3, #4caf50); /* Colorful gradient */
+    border: 2px solid #d17900;
+    border-radius: 8%;
+    opacity: 0.9;
+    animation: kiteAnimation 30s infinite ease-in-out;
+}
+
+.kite1 {
+    background: linear-gradient(45deg, #e91e63, #ff9800, #3f51b5, #8bc34a);
+}
+.kite2 {
+    background: linear-gradient(45deg, #9c27b0, #03a9f4, #cddc39, #ffc107);
+}
+.kite3 {
+    background: linear-gradient(45deg, #673ab7, #00bcd4, #ff5722, #ffeb3b);
+}
+.kite4 {
+    background: linear-gradient(45deg, #3f51b5, #009688, #8bc34a, #f44336);
+}
+.kite5 {
+    background: linear-gradient(45deg, #00bcd4, #4caf50, #ff9800, #e91e63);
+}
+.kite6 {
+    background: linear-gradient(45deg, #ff5722, #ffeb3b, #03a9f4, #9c27b0);
+}
+.kite7 {
+    background: linear-gradient(45deg, #cddc39, #8bc34a, #ff5722, #673ab7);
+}
+.kite8 {
+    background: linear-gradient(45deg, #ffc107, #e91e63, #3f51b5, #4caf50);
+}
+
+        @keyframes kiteAnimation {
+            0% { transform: translateX(-100px) translateY(200px) rotate(45deg); }
+            50% { transform: translateX(100vw) translateY(-150px) rotate(50deg); }
+            100% { transform: translateX(-100px) translateY(200px) rotate(45deg); }
+        }
+
+        /* Decorations */
+        .tilgul, .haldi-kunku {
+            display: inline-block;
+            margin: 0 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tilgul {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #d8a37b, #8c5a36);
+            border-radius: 50%;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .haldi-kunku {
+            width: 80px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff5e6;
+            border-radius: 10px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .haldi {
+            width: 20px;
+            height: 20px;
+            background: #f7c242;
+            border-radius: 50%;
+        }
+
+        .kunku {
+            width: 20px;
+            height: 20px;
+            background: #d13c3c;
+            border-radius: 50%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .invitation {
+                padding: 20px;
+                font-size: 1.1rem;
+                max-width: 90%;
+            }
+
+            .quote {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .footer {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .invitation {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .quote {
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+
+            .kite {
+                width: 80px;
+                height: 80px;
+            }
+
+            .tilgul {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 हळदी-कुंकवाचे खास निमंत्रण 🌸</h1>
+        <h2>मकर संक्रांतीच्या मंगल प्रसंगी</h2>
+
+        <div class="decorations">
+            <div class="tilgul"></div>
+            <div class="haldi-kunku">
+                <div class="haldi"></div>
+                <div class="kunku"></div>
+            </div>
+            <div class="tilgul"></div>
+        </div>
+
+        <div class="invitation">
+            <p>"सण-उत्सव आपल्याला जोडणारा पूल आहे. चला, आपण एकत्र येऊया आणि आनंद साजरा करूया."</p>
+           
+            <p>आपल्या स्नेहबंधांना अधिक घट्ट करण्यासाठी मी आपल्यासाठी एक खास हळदी-कुंकवाचा कार्यक्रम आयोजित केला आहे. तुम्ही या कार्यक्रमास नक्की हजेरी लावून, आपला आनंद द्विगुणित कराल, हीच अपेक्षा! 🌺</p>
+
+            <div class="highlight-text">
+                <strong>🗓️ दिनांक:</strong> 25/01/2025<br>
+                <strong>🕕 वेळ:</strong> सायं. ६.०० ते रात्री ९.००
+            </div>
+
+            <div class="highlight-text">
+                <strong>📍 स्थळ:</strong> गुलमोहर बंगला, डफळे कॉलनी, सत्या ग्रुप, उंचगाव, कोल्हापूर - ४१६००५
+            </div>
+            
+            <div class="highlight-text">
+                <strong>👩‍❤️‍👩 निमंत्रक:</strong> सौ. प्रियांका प्रशांत कापसे
+            </div>
+
+            <p class="highlight-text">तिळगुळ घ्या, गोड गोड बोला... 🌻</p>
+        </div>
+
+        <!-- Added Quote Section -->
+        <div class="quote">
+            "जिथे सणांच्या साखळीत आपुलकीची वीण घट्ट होते, तिथे आनंदाचे सोहळे नव्या उभारीला सुरुवात करतात."
+        </div>
+    </div>
+
+    <div class="kite-section">
+        <div class="kite kite1" style="top: 15%; left: 10%;"></div>
+        <div class="kite kite2" style="top: 25%; left: 30%;"></div>
+        <div class="kite kite3" style="top: 10%; left: 50%;"></div>
+        <div class="kite kite4" style="top: 5%; left: 20%;"></div>
+        <div class="kite kite5" style="top: 35%; left: 70%;"></div>
+        <div class="kite kite6" style="top: 40%; left: 90%;"></div>
+        <div class="kite kite7" style="top: 60%; left: 15%;"></div>
+        <div class="kite kite8" style="top: 70%; left: 45%;"></div>
+    </div>
+    <div class="kite kite1" style="top: 15%; left: 10%;"></div>
+<div class="kite kite2" style="top: 25%; left: 30%;"></div>
+<div class="kite kite3" style="top: 10%; left: 50%;"></div>
+<div class="kite kite4" style="top: 5%; left: 20%;"></div>
+<div class="kite kite5" style="top: 35%; left: 70%;"></div>
+<div class="kite kite6" style="top: 40%; left: 90%;"></div>
+<div class="kite kite7" style="top: 60%; left: 15%;"></div>
+<div class="kite kite8" style="top: 70%; left: 45%;"></div>
+
+<div class="kite-section">
+            <div class="kite" style="top: 10%; left: 5%;"></div>
+            <div class="kite" style="top: 30%; right: 5%;"></div>
+            <div class="kite" style="top: 50%; left: 30%;"></div>
+        </div>
+
+        <div class="tilgul"></div>
+        <div class="haldi-kunku">
+            <div class="haldi"></div>
+            <div class="kunku"></div>
+        </div>
+    </div>
+    <div class="footer">
+        शुभेच्छा!<br>आपली उपस्थिती आनंद द्विगुणित करेल 🌼
+    </div>
+</body>
+</html>
